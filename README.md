@@ -3,7 +3,9 @@
 AWS Educate Classrooms now support Amazon EC2 F1 instances. 
 Educators now no longer have to rely on students having to create their own AWS accounts for developing hardware accelerators. 
 
-You can instead create no-cost AWS Educate classroom accounts for students to learn about the cloud in a hands-on environment.
+You can instead create no-cost AWS Educate classroom accounts for students to learn about the cloud in a hands-on environment. 
+
+ℹ️ **NOTE:** AWS Classrooms are meant for instructional use only ([AWS Educate terms and conditions](https://www.awseducate.com/registrationtandc)). Faculty interested in using F1 instances for research should apply for [AWS Cloud Credits for Research](https://aws.amazon.com/government-education/research-and-technical-computing/cloud-credit-for-research/).
 
 This guide covers how educators can request access to AWS Educate Classroom to enable students to develop custom hardware accelerators 
 on field programmable gate arrays (FPGAs) as part of their coursework. Go through the following steps to get started:
@@ -12,9 +14,6 @@ on field programmable gate arrays (FPGAs) as part of their coursework. Go throug
 
 If you have not done so already, you will need to join [AWS Educate](https://aws.amazon.com/education/awseducate/) 
 and apply for AWS credits on behalf of your course.
-
-ℹ️ **NOTE:** Review the [AWS Educate terms and conditions](https://www.awseducate.com/registrationtandc) 
-and [AWS Credits terms and conditions](https://aws.amazon.com/awscredits/) before proceeding.
 
 Additionally, you will need to inform the AWS Educate and Amazon EC2 F1 instance teams of your application by emailing 
 from your institution’s account with course details to f1Educator@amazon.com with the following details:
