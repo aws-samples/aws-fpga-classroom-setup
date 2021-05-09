@@ -33,7 +33,19 @@
       "launch_block_device_mappings": [
         {
         "device_name": "/dev/xvda",
-          "volume_size": "150",
+          "volume_size": "50",
+          "volume_type": "gp2",
+          "delete_on_termination": true
+        },
+        {
+        "device_name": "/dev/sdb",
+          "volume_size": "50",
+          "volume_type": "gp2",
+          "delete_on_termination": true
+        },
+        {
+        "device_name": "/dev/sdc",
+          "volume_size": "50",
           "volume_type": "gp2",
           "delete_on_termination": true
         }
@@ -45,6 +57,19 @@
       "type": "file",
       "source": "./files/",
       "destination": "/tmp/"
+    },
+    {
+      "type": "shell",
+      "inline": [
+        "sudo pvcreate /dev/nvme1n1",
+        "sudo pvcreate /dev/nvme2n1",
+        "sudo vgcreate vg1 /dev/nvme1n1 /dev/nvme2n1",
+        "sudo lvcreate -l100%FREE -n lvxilinx vg1",
+        "sudo mkfs.xfs /dev/mapper/vg1-lvxilinx",
+        "sudo mkdir /opt/Xilinx",
+        "sudo mount /dev/mapper/vg1-lvxilinx /opt/Xilinx/",
+        "sudo echo /dev/mapper/vg1-lvxilinx /opt/Xilinx/ xfs defaults 0 2 |sudo tee -a /etc/fstab"
+      ]
     },
     {
       "type": "shell",
